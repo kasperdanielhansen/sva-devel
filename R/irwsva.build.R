@@ -67,6 +67,7 @@ irwsva.build <- function(dat, mod, mod0 = NULL,n.sv,B=5) {
     uu <- eigen(t(dats)%*%dats)
     cat(paste(i," "))
   }
+  cat("\n")
   
   sv = svd(dats)$v[,1:n.sv]
   retval <- list(sv=sv,pprob.gam = pprob.gam, pprob.b=pprob.b,n.sv=n.sv)
